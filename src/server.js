@@ -5,14 +5,14 @@ const helmet = require('helmet');
 const rateLimit = require('express-rate-limit');
 require('dotenv').config();
 
-const connectDB = require('./src/config/database');
-const errorHandler = require('./src/middleware/errorHandler');
+const connectDB = require('./config/database');
+const errorHandler = require('./middleware/errorHandler');
 
 // Route imports
-const userRoutes = require('./src/routes/userRoutes');
-const pointsRoutes = require('./src/routes/pointsRoutes');
-const leaderboardRoutes = require('./src/routes/leaderboardRoutes');
-const historyRoutes = require('./src/routes/historyRoutes');
+const userRoutes = require('./routes/userRoutes');
+const pointsRoutes = require('./routes/pointsRoutes');
+const leaderboardRoutes = require('./routes/leaderboardRoutes');
+const historyRoutes = require('./routes/historyRoutes');
 
 const app = express();
 const PORT = process.env.PORT || 5000;
