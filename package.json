@@ -7,7 +7,7 @@
   "type": "commonjs",
   "main": "src/server.js",
   "scripts": {
-    "start": "node backend/src/server.js"
+    "start": "node src/server.js"
   },
   "keywords": [],
   "dependencies": {
