@@ -31,7 +31,13 @@ const limiter = rateLimit({
 app.use(limiter);
 
 // General middleware
-app.use(cors());
+app.use(cors({
+  origin:[
+    "http://localhost:5173/",
+    "https://ranking-based-frontend-lczgzd9j0-sumit-kumars-projects-e897095f.vercel.app/"
+  ],
+  credentials: true,
+}));
 app.use(express.json({ limit: '10mb' }));
 
 // Routes
